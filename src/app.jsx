@@ -1,0 +1,28 @@
+import { Switch, Route, Redirect } from "react-router-dom";
+import React, { Component } from "react"
+
+
+
+
+
+
+class App extends Component {
+    constructor(props) {
+        super(props){
+            const jwt = localStorage.getItem('token');
+            try {
+                const decodedUser = jwt_decode(jwt);
+                this.state = {
+                    user: decodedUser,
+                };
+            } catch {
+                this.state = {
+                    user: null,
+                };
+            }
+        }
+
+        
+
+    }
+}

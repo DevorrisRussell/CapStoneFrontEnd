@@ -30,7 +30,13 @@ class App extends Component {
                 });
             } catch {}
         }
-
+        render() {
+            let user = this.state.user;
+            console.log(user);
+            return (
+                
+            )
+        }
 
     }
 }

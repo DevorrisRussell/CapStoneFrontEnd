@@ -21,8 +21,16 @@ class App extends Component {
                 };
             }
         }
+        componentDidMount() {
+            const jwt = localStorage.getItem("token");
+            try{
+                const decodedUser = jwt_decode(jwt);
+                this.setState({
+                    user: decodedUser,
+                });
+            } catch {}
+        }
 
-        
 
     }
 }

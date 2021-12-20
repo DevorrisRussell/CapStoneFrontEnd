@@ -6,6 +6,7 @@ import jwt_decode from "jwt-decode";
 
 import Register from "./components/Register/register";
 import Login from "./components/Login/login"
+import NavigationBar from "./components/NavigationBar/navigationBar";
 
 
 
@@ -49,6 +50,7 @@ class App extends Component {
             <Route path="/" exact component={Login} />
 
              <Register path="/Register" component={Register} />
+             <NavigationBar path="/NavigationBar" component={NavigationBar} />
 
 
             </Switch>

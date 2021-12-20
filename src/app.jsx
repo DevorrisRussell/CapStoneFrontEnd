@@ -1,4 +1,4 @@
-import { Switch, Route,Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import React, { Component } from "react";
 
 import jwt_decode from "jwt-decode";
@@ -39,7 +39,6 @@ class App extends Component {
         } catch {}
       }
 
-
       render( )
         {
           
@@ -47,14 +46,15 @@ class App extends Component {
           
                <Switch>
 
-            <Route path="/Login" component={Login} />
+            <Route path="/Login" exact component={Login} />
 
              <Register path="/Register" component={Register} />
 
 
             </Switch>
            
-              );  }            
+              ); 
+             }            
             }
           
           

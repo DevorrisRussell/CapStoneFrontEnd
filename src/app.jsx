@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Switch, Route,Link } from "react-router-dom";
 import React, { Component } from "react";
 
 import jwt_decode from "jwt-decode";
@@ -29,11 +29,22 @@ class App extends Component {
             }
         } 
       }
+      componentDidMount() {
+        const jwt = localStorage.getItem("token");
+        try {
+          const decodedUser = jwt_decode(jwt);
+          this.setState({
+            user: decodedUser,
+          });
+        } catch {}
+      }
+
+
       render( )
         {
           
             return (
-             <div className="App">
+          
                <Switch>
 
             <Route path="/Login" component={Login} />
@@ -42,7 +53,7 @@ class App extends Component {
 
 
             </Switch>
-             </div>
+           
               );  }            
             }
           

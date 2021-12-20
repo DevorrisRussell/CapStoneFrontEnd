@@ -1,27 +1,59 @@
-
+import React from "react";
+import {Link} from 'react-router-dom';
+import axios from "axios";
 
 
 function NavigationBar({user}){
     return(
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div className="collapse navbar-collapse" id="navbarNav">
+            {user && <h4>Welcome {user.username}</h4>}
+            <ul className="navbar-nav">
+            <li>
+           
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#">Home</a>
-        <a class="nav-link" href="#">Equipment Inventory</a>
-        <a class="nav-link disabled">Disabled</a>
-      </div>
-    </div>
-  </div>
-</nav>
-    )
+                        <Link to='/register'>
+                            <button type="button" class="btn btn-outline-primary"><h3>Register</h3></button>
+                        </Link>
+                       
+                        </li>
+                        {!user &&
+                            <React.Fragment>
+                                <li>
+                                    <Link to='/equipment'>
+                                    <button type="button"class="btn btn-outline-primary"><h3>Equipment</h3></button>
+                                    </Link>
+                             
+                                    
+                                   
+                                </li>
+                                
+                                <li>
+                                <div class="d-grid gap-2 col-1 mx-auto">
+                                    <Link to='/Login'>
+                                <button type="button"class="btn btn-outline-primary"><h3>Login</h3> </button>
+                                </Link>
+                                </div>
+                                </li>
+                                
+                            </React.Fragment>
+                        }
+                        {user &&
+                            <React.Fragment>
+                               
+                                <li>
+                                   
+                                    
+                                </li>
+                                
+                    </React.Fragment>                   
+                }
+            </ul>
+        </div>
+    </nav>
+)
+}
 
-    }
+
 
 export default NavigationBar; 

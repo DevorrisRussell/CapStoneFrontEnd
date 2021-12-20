@@ -7,6 +7,7 @@ import jwt_decode from "jwt-decode";
 import Register from "./components/Register/register";
 import Login from "./components/Login/login"
 import NavigationBar from "./components/NavigationBar/navigationBar";
+import Equipment from "./components/Equipment/equipment";
 
 
 
@@ -53,6 +54,7 @@ class App extends Component {
 
              <Register path="/Register" component={Register} />
              <NavigationBar path="/NavigationBar" component={NavigationBar} />
+             < Equipment path="/Equipment" component={Equipment} />
 
 
             </Switch>

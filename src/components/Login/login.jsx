@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./login.css";
+//import "./login.css";
 
 function Login(props) {
   const [email, setEmail] = useState("");
@@ -20,10 +20,12 @@ function Login(props) {
 
   return (
     <div className="container">
-      <div class="row">
-        <div class="col"><h3>Enter Your Information</h3></div>
+      <div className="row">
+        
+        <div className="col"><h3>Enter Your Information</h3></div>
         <div>
-          <div className="card text-white bg-dark" style={{ width: "18rem" }}>
+        
+          <div className="card text-white bg-dark" style={{ width: "20rem" }}>
             <div className="card-body">
               <form onSubmit={handleSubmit}>
                 <div className="form-group" size="lg" controlId="email">
@@ -54,7 +56,7 @@ function Login(props) {
           </div>
         </div>
       </div>
-    </div>
+    </div> 
   );
 }
 

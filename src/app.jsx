@@ -44,7 +44,9 @@ class App extends Component {
         {
           
             return (
-          
+              <div>
+                <NavigationBar/>
+           
                <Switch>
 
             <Route path="/" exact component={Login} />
@@ -54,7 +56,7 @@ class App extends Component {
 
 
             </Switch>
-           
+            </div>
               ); 
              }            
             }

@@ -57,6 +57,7 @@ class App extends Component {
              <NavigationBar path="/NavigationBar" component={NavigationBar} />
              < Equipment path="/Equipment" component={Equipment} />
              < Logout path="/Logout" component={Logout} />
+             < Login path="/Login" component={Login} /> 
 
 
             </Switch>

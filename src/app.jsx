@@ -43,20 +43,31 @@ class App extends Component {
       }
 
       render( )
-        {
+        { 
+          let user = this.state.user;
+          console.log(user);
           
             return (
               <div>
-                <NavigationBar/>
+                <NavigationBar user={user} />
            
                <Switch>
 
-            <Route path="/" exact component={Login} />
+            <Route 
+            path="/" 
+            exact render={(props) => {
+              if (!user) {
+                return < Redirect to="/register" />;
+            } else {
+              return <Home {...props} user={user} />;
+            }
+            } }
+            />
 
              <Register path="/Register" component={Register} />
              <NavigationBar path="/NavigationBar" component={NavigationBar} />
              < Equipment path="/Equipment" component={Equipment} />
-             < Logout path="/Logout" component={Logout} />
+             < Logout path="/Logout" component={Logout} user={user} />
              < Login path="/Login" component={Login} /> 
 
 

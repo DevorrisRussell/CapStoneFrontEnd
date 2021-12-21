@@ -8,6 +8,7 @@ import Register from "./components/Register/register";
 import Login from "./components/Login/login"
 import NavigationBar from "./components/NavigationBar/navigationBar";
 import Equipment from "./components/Equipment/equipment";
+import Logout from "./components/Logout/logout"
 
 
 

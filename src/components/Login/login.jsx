@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-//import "./login.css";
+import "./login.css";
 
 function Login(props) {
   const [email, setEmail] = useState("");
@@ -22,7 +22,7 @@ function Login(props) {
     <div className="container">
       <div className="row">
         
-        <div className="col"><h3>Enter Your Information</h3></div>
+        <div className="col"><h3>Enter Your Information</h3>
         <div>
         
           <div className="card text-white bg-dark" style={{ width: "20rem" }}>
@@ -57,6 +57,7 @@ function Login(props) {
         </div>
       </div>
     </div> 
+    </div>
   );
 }
 

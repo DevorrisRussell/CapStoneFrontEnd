@@ -8,7 +8,7 @@
 }
 
 body {
-	background: linear-gradient(90deg, #3bd15c9d, #075ea5);		
+	background: linear-gradient(90deg, #07a507, #07a507);		
 }
 
 h3 {
@@ -105,7 +105,7 @@ h3 {
 .login__icon {
 	position: absolute;
 	top: 30px;
-	color: #7875B5;
+	color: #3025cf;
 }
 
 .login__input {

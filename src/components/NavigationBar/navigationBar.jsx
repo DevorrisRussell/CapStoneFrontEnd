@@ -5,7 +5,7 @@ import axios from "axios";
 
 function NavigationBar({user}){
     return(
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-light">
         <div className="collapse navbar-collapse" id="navbarNav">
             {user && <h4>Welcome {user.username}</h4>}
             <ul className="navbar-nav">

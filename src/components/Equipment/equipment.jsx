@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./equipment.css";
 
 
+function Equipment({}){
+    return (
+    <div class="float-container">
 
-function Equipment({user}){
-    return(
-        <div class="row">
-  <div class="column"></div>
-  <div class="column"></div>
+  <div class="float-child">
+    <div class="green">Equipment Available</div>
+  </div>
+  
+  <div class="float-child">
+    <div class="blue">My Equipment</div>
+  </div>
+  
 </div>
-    )
-}
-
+    )   }
 
 export default Equipment;

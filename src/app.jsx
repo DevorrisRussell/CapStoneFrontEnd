@@ -3,7 +3,7 @@ import React, { Component } from "react";
 
 import jwt_decode from "jwt-decode";
 
-
+import Home from "./components/Home/home";
 import Register from "./components/Register/register";
 import Login from "./components/Login/login"
 import NavigationBar from "./components/NavigationBar/navigationBar";
@@ -59,7 +59,7 @@ class App extends Component {
               if (!user) {
                 return < Redirect to="/register" />;
             } else {
-              return < Login {...props} user={user} />;
+              return < Home {...props} user={user} />;
             }
             } }
             />

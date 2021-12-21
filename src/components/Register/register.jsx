@@ -23,20 +23,25 @@ function Register(){
 	}
 
     return(
-
+        
         <div className="container">
             <div class="row">
-              <div class="col">
+              <div class="col-md-3">
+              <p>Share and borrow equipment with your community</p>
             </div>
-          <div className="card text-white bg-dark" style={{width: "18rem"}}>
+           
+          <div className="card text-black bg-light" style={{width: "22rem"}}>
             <div className="card-body">
+            <div class="col-md-10">
+
               <form onSubmit={handleSubmit}>
                 <div className="form-group" size="lg" controlId="name">
                     <label className="form-label">
-                        <h3>Name</h3>
+                        <h2>Enter your information</h2>
+                    <label>Name</label>
                     <input autoFocus type="Name" value={Name} onChange={(e) => setName(e.target.value)} />
                     </label>
-                </div>
+                </div> 
                 <div className="form-group" size="lg" controlId="email">
                     <label>Email</label>
                     <input autoFocus type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
@@ -45,12 +50,13 @@ function Register(){
                     <label>Password</label>
                     <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="form-control"/>
                 <p>Create an account</p>
-                <button class="bg-dark" type='submit' ><h3>Register</h3></button>
-                </div>
+                <button class="btn btn-primary" type='submit' ><label>Register</label></button>
+                </div> 
                 </form>
                 <Link to='/Login'>
                     <button className="btn btn-primary">Already a user? Login Here</button>
                 </Link>
+                </div>
              </div>
 	      </div>
         </div>

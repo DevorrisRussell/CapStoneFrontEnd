@@ -1,4 +1,4 @@
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import React, { Component } from "react";
 
 import jwt_decode from "jwt-decode";
@@ -59,16 +59,17 @@ class App extends Component {
               if (!user) {
                 return < Redirect to="/register" />;
             } else {
-              return <Home {...props} user={user} />;
+              return < Login {...props} user={user} />;
             }
             } }
             />
 
              <Register path="/Register" component={Register} />
+             < Login path="/Login" component={Login} /> 
              <NavigationBar path="/NavigationBar" component={NavigationBar} />
              < Equipment path="/Equipment" component={Equipment} />
              < Logout path="/Logout" component={Logout} user={user} />
-             < Login path="/Login" component={Login} /> 
+             
 
 
             </Switch>

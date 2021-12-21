@@ -1,0 +1,7 @@
+.homecontainer{
+    display: flex;
+    width: 100%;
+}
+.cardcomment{
+    background-color: darkgray;
+}

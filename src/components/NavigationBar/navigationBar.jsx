@@ -10,6 +10,16 @@ function NavigationBar({user}){
             {user && <h4>Welcome {user.username}</h4>}
             <ul className="navbar-nav">
             <li>
+                                    <Link to='/equipment'>
+                                    <button type="button"class="btn btn-outline-primary"><h3>Equipment</h3></button>
+                                    </Link>
+                                   
+                                </li>
+            
+                        
+                        {!user &&
+                            <React.Fragment>
+                                <li>
            
 
                         <Link to='/register'>
@@ -17,16 +27,6 @@ function NavigationBar({user}){
                         </Link>
                        
                         </li>
-                        {!user &&
-                            <React.Fragment>
-                                <li>
-                                    <Link to='/equipment'>
-                                    <button type="button"class="btn btn-outline-primary"><h3>Equipment</h3></button>
-                                    </Link>
-                             
-                                    
-                                   
-                                </li>
                                 
                                 <li>
                                 <div class="d-grid gap-2 col-1 mx-auto">

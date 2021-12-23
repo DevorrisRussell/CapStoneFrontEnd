@@ -47,7 +47,7 @@ function Login(props) {
                   </div>
                 </div>
                 <div class="d-grid gap-2">
-                  <button class="btn btn-secondary" type="button">
+                  <button class="btn btn-secondary" type="submit">
                     <h3>Login</h3>
                   </button>
                 </div>

@@ -59,13 +59,14 @@ class App extends Component {
               if (!user) {
                 return < Redirect to="/register" />;
             } else {
-              return < Home {...props} user={user} />;
+              return < Register {...props} user={user} />;
             }
             } }
             />
 
              <Register path="/Register" component={Register} />
              < Login path="/Login" component={Login} /> 
+             <Home path='/Home' component={Home} />
              <NavigationBar path="/NavigationBar" component={NavigationBar} />
              < Equipment path="/Equipment" component={Equipment} />
              < Logout path="/Logout" component={Logout} user={user} />

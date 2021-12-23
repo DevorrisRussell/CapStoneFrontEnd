@@ -49,7 +49,7 @@ useEffect(() => {
   getCurrentUser();
 }, [equipment]);
 
-const likePost = (i) =>{
+const newEquipment = (i) =>{
   const jwt = localStorage.getItem("token");
     fetch('/equipments', {
       method:"put",
@@ -59,19 +59,18 @@ const likePost = (i) =>{
       },
       body:JSON.stringify({
         postId: i
-      })
-    }).then(res=>res.json())
-    .then(setlike=>{
+      }) 
+    })
+  }}
+//     }).then(res=>res.json())
+//     .then(equipment=>{
       
-      const newData = data.map(post =>{
-        if(post._id==setlike._id){
-          return setlike
-        }else{
-          return post
-        }
-      })
-      setData(newData)
-    }) 
-}} 
-    
+//       const newData = data.map(equipment =>{
+//         if(equipment._id){
+//           return equipment
+//         }
+//       setData(newData)
+//     }) 
+// }
+
 export default Home;

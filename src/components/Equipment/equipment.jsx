@@ -54,13 +54,17 @@ function Equipment(){
               <blockquote className="blockquote mb-0">
                 <div className="form-group" size="lg" controlId="name">
                   <label className="form-label">
-                  <button type="submit">Add Equipment</button>
-                    <input
-                      autoFocus
-                      type="desc"
-                      value={desc}
-                      onChange={(e) => setDesc(e.target.value)}
-                    />
+                  <button onSubmit={(e) => handleSubmit(e)}>Add Equipment</button>
+                  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      
+    </tr>
+  </thead>
+  <tbody></tbody>
+                   </table> 
          </label>
                 </div>
                 
@@ -70,6 +74,9 @@ function Equipment(){
         </form>
       </div>
       </div>
+      
+      
+     
     )
     }
 

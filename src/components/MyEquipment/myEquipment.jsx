@@ -26,7 +26,7 @@ function MyEquipment(){
 
     return(
         <div>
-            <Link to='/'>Home</Link>
+            <Link to='/'>My Equipment List</Link>
           
             {myEquipment.length > 0 &&
               myEquipment.map(Equipments => <h1>{Equipments.name} </h1> )  

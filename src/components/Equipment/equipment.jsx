@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./equipment.css";
-import { propertiesParser } from "config/parser";
-//import { propertiesParser } from "config/parser";
+import { propertiesParser } from "config/parser"
+
 
 
 function Equipment(){
   const [userProfile, setUserProfile] = useState();
-  const [desc, setDesc,equipmentId] = useState("");
+  const [desc, setDesc,equipmentId] = useState([]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -51,10 +51,8 @@ function Equipment(){
       <h1> Equipment List </h1>
       <div className="Comment">
         <form onSubmit={(e) => handleSubmit(e)}>
-          {equipmentId.map((equipmentId) => (
-            <div className=" form-inline" key={Equipment}>
-              </div>
-          )
+          {Equipment.map((equipmentId, desc) => 
+          <div className="form-inline" key={equipmentId}></div>
           )}
           <div className="card">
             <div className="card-header"></div>

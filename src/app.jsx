@@ -7,7 +7,7 @@ import MyEquipment from "./components/MyEquipment/myEquipment";
 import Register from "./components/Register/register";
 import Login from "./components/Login/login"
 import NavigationBar from "./components/NavigationBar/navigationBar";
-// import Equipment from "./components/Equipment/equipment";
+import Equipment from "./components/Equipment/equipment";
 import Logout from "./components/Logout/logout"
 
 
@@ -68,7 +68,7 @@ class App extends Component {
              < Login path="/Login" component={Login} /> 
             <MyEquipment path='/MyEquipment' component={MyEquipment} /> 
              <NavigationBar path="/NavigationBar" component={NavigationBar} />
-             {/* < Equipment path="/Equipment" component={Equipment} /> */}
+             < Equipment path="/Equipment" component={Equipment} />
              < Logout path="/Logout" component={Logout} user={user} />
              
 

@@ -5,7 +5,7 @@ import {Link} from "react-router-dom"
 
 
 function Equipment(){
-    const [equipment ] = useState([])
+    const [equipment, setEquipment] = useState([])
 
    useEffect(() => {
       getAllEquipment();
@@ -29,9 +29,9 @@ function Equipment(){
     return(
         <div>
             <Link to='/Equipment'>Equipment</Link>
-          {/* {<button className = "getAllFriends" onClick={getAllFriends}>Friends</button> } */}
+        
             {equipment.length > 0 &&
-              equipment.map(theEquipment => <h1>{theEquipment.name} </h1> )  
+              equipment.map(theEquipment => <h1>{theEquipment._id} </h1> )  
             }
         
            

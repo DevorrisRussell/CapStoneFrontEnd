@@ -17,7 +17,7 @@ function MyEquipment(){
                 'x-auth-token': jwt
             }
         } 
-        let response = await axios.get(`http://localhost:5000/api/users/myList`, configObject)
+        let response = await axios.get(`http://localhost:5000/api/current/myList`, configObject)
         setMyEquipment(response.data)
         console.log(response.data)
     }
@@ -29,7 +29,7 @@ function MyEquipment(){
             <Link to='/'>My Equipment List</Link>
           
             {myEquipment.length > 0 &&
-              myEquipment.map(Equipments => <h1>{Equipments.name} </h1> )  
+              myEquipment.map(Equipments => <h1>{Equipments.myList} </h1> )  
             }
         
            

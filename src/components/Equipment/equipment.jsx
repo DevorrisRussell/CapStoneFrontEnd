@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
+import './equipment.css'
 
 
 
 function Equipment(){
-    const [equipments, setEquipment] = useState([])
-
+    const [equipments, setEquipment] = useState([]);
+    const [ desc, isAvaliable] = useState([])
    useEffect(() => {
       getAllEquipment();
    }, [])
@@ -28,7 +29,7 @@ function Equipment(){
 
     return(
         <div>
-            <Link to='/Equipment'>Equipment</Link>
+            <Link to='/Equipment'><h1>Equipment</h1></Link>
             <table id='layout'>
       <thead>
         <th>Equipment Type</th>
@@ -38,21 +39,21 @@ function Equipment(){
       </thead>
       <tbody>
             {equipments.length > 0 &&
-              equipments.map(theEquipment => {
-                return (
-                  <tr>
-                  <td>{theEquipment.name}</td>
-                  <td>{theEquipment.desc}</td>
-                   <td>{theEquipment.isAvailable}</td>
+              equipments.map(equipments => 
+                <tr key= {equipments.id}>
+                  
+                  <td>{equipments.name}</td>
+                  <td>{equipments.description}</td>
+                   <td>{equipments.isAvailable}</td>
                   
                 </tr>
-                )
-              }
+                )}
+              
              
               
               
               )  
-            }
+            
         </tbody>
            </table>
         </div>

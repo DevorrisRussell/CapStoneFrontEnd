@@ -29,12 +29,32 @@ function Equipment(){
     return(
         <div>
             <Link to='/Equipment'>Equipment</Link>
-        
+            <table id='layout'>
+      <thead>
+        <th>Equipment Type</th>
+        <th>Description</th>
+        <th>Status</th>
+       
+      </thead>
+      <tbody>
             {equipments.length > 0 &&
-              equipments.map(theEquipment => <li>{theEquipment.name} </li> )  
+              equipments.map(theEquipment => {
+                return (
+                  <tr>
+                  <td>{theEquipment.name}</td>
+                  <td>{theEquipment.desc}</td>
+                   <td>{theEquipment.isAvailable}</td>
+                  
+                </tr>
+                )
+              }
+             
+              
+              
+              )  
             }
-        
-           
+        </tbody>
+           </table>
         </div>
     );
 }

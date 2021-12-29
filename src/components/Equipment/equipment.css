@@ -1,8 +1,30 @@
-
-
-.float-child {
-    width: 50%;
-    float: left;
-    padding: 20px;
-    border: 6px solid rgb(8, 8, 8);
+#title {
+    text-align: center;
+    font-family: arial, sans-serif;
 }
+
+#layout {
+    text-align: center;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    border: 3px solid black;
+    width: 100%;
+}
+
+#layout td, #layout th {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+#layout tr:nth-child(even){background-color: rgb(239, 239, 243);}
+
+#layout tr:hover {background-color: lightblue;}
+
+#layout th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: whitesmoke;
+    color: lightblue;
+}
+

@@ -5,7 +5,7 @@ import {Link} from "react-router-dom"
 
 
 function Equipment(){
-    const [equipment, setEquipment] = useState([])
+    const [equipments, setEquipment] = useState([])
 
    useEffect(() => {
       getAllEquipment();
@@ -19,7 +19,7 @@ function Equipment(){
                 'x-auth-token': jwt
             }
         } 
-        let response = await axios.get(`http://localhost:5000/api/equipment`, configObject)
+        let response = await axios.get(`http://localhost:5000/api/equipments`, configObject)
         setEquipment(response.data)
         console.log(response.data)
     }
@@ -30,8 +30,8 @@ function Equipment(){
         <div>
             <Link to='/Equipment'>Equipment</Link>
         
-            {equipment.length > 0 &&
-              equipment.map(theEquipment => <h1>{theEquipment._id} </h1> )  
+            {equipments.length > 0 &&
+              equipments.map(theEquipment => <li>{theEquipment.name} </li> )  
             }
         
            

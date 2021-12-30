@@ -3,14 +3,14 @@ import axios from "axios";
 
 function Home() {
   const [userProfile, setUserProfile] = useState();
-  const [desc, setDesc,equipmentId] = useState("");
+  const [desc, setDesc,equipmentId, name] = useState("");
   
   const [newEquipment, setNewEquipment,data,setData] = useState({});
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     let registerEquipment = {
-      name: Name,
+      name: name,
       desc: desc
       
     };

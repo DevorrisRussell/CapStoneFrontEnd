@@ -66,7 +66,7 @@ class App extends Component {
 
              <Register path="/Register" component={Register} />
              < Login path="/Login" component={Login} /> 
-            <MyEquipment path='/MyEquipment' component={MyEquipment} /> 
+            <Home path='/Home' component={Home} /> 
              <NavigationBar path="/NavigationBar" component={NavigationBar} />
              < Equipment path="/Equipment" component={Equipment} />
              < Logout path="/Logout" component={Logout} user={user} />

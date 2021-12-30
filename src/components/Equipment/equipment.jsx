@@ -29,7 +29,11 @@ function Equipment(){
 
     return(
         <div>
-            <Link to='/Equipment'><h1>Equipment</h1></Link>
+                <Link to='/Equipment'>
+                 <h1 style="color: Black;">Equipment List</h1> 
+                </Link>
+
+        
             <table id='layout'>
       <thead>
         <th>Equipment Type</th>

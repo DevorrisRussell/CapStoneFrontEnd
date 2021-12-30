@@ -3,7 +3,7 @@ import React, { Component } from "react";
 
 import jwt_decode from "jwt-decode";
 
-import MyEquipment from "./components/MyEquipment/myEquipment";
+import Home from "./components/Home/home";
 import Register from "./components/Register/register";
 import Login from "./components/Login/login"
 import NavigationBar from "./components/NavigationBar/navigationBar";

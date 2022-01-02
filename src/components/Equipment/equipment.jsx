@@ -7,7 +7,7 @@ import './equipment.css'
 
 function Equipment(){
     const [equipments, setEquipment] = useState([]);
-    const [ desc, isAvaliable] = useState([])
+    const [ desc, setDesc] = useState([])
    useEffect(() => {
       getAllEquipment();
    }, [])
@@ -30,7 +30,7 @@ function Equipment(){
     return(
         <div>
                 <Link to='/Equipment'>
-                 <h1 style="color: Black;">Equipment List</h1> 
+                 <h1>Equipment List</h1> 
                 </Link>
 
         
@@ -48,7 +48,9 @@ function Equipment(){
                   
                   <td>{equipments.name}</td>
                   <td>{equipments.description}</td>
-                   <td>{equipments.isAvailable}</td>
+                   <td>{equipments.isAvailable == "true"? "Available": "Unavailable"
+
+                   }</td>
                   
                 </tr>
                 )}
@@ -56,7 +58,7 @@ function Equipment(){
              
               
               
-              )  
+               
             
         </tbody>
            </table>

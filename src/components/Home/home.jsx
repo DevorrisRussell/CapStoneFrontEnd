@@ -3,8 +3,8 @@ import axios from "axios";
 
 function Home() {
   const [userProfile, setUserProfile] = useState();
-  const [desc, setDesc,equipmentId, name] = useState("");
-  
+  const [name, setName] = useState("");
+  const [desc, setDesc] = useState("");
   const [newEquipment, setNewEquipment,data,setData] = useState({});
 
   const handleSubmit = async (e) => {
@@ -13,6 +13,9 @@ function Home() {
       name: name,
       desc: desc
       
+
+
+
     };
     const jwt = localStorage.getItem("token");
     let configObject = {
@@ -42,10 +45,7 @@ function Home() {
     getCurrentUser();
   }, [newEquipment]);
 
-  useEffect(() => {
-    getCurrentUser();
-  }, [newEquipment]);
-  
+ 
   
   
   
@@ -53,31 +53,42 @@ function Home() {
 
 
     return(
-       
-<form class="row g-3">
-  <div class="col-md-4">
-    <label for="validationDefault01" class="form-label">Equipment Type</label>
-    <input type="text" class="form-control" id="validationDefault01" value="" required></input>
+      <div>
+{ <h1>Hello World</h1> }
+      {/* <form class="row g-3"onSubmit={(e) => handleSubmit(e)}> 
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Equipment Name</label>
+    <input
+                      autoFocus
+                      type="name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                    />
   </div>
-  <div class="col-md-4">
-    <label for="validationDefault02" class="form-label">Description</label>
-    <input type="text" class="form-control" id="validationDefault02" value="" required></input>
-  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Equipment Description</label>
+    <input
+                      autoFocus
+                      type="desc"
+                      value={desc}
+                      onChange={(e) => setDesc(e.target.value)}
+                    />
+  </div> */} */}
   
- 
-  <div class="col-12">
+  {/* <div class="col-12">
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required></input>
-      <label class="form-check-label" for="invalidCheck2">
-        Agree to terms and conditions
+      <input class="form-check-input" type="checkbox" id="gridCheck"> </input>
+      <label class="form-check-label" for="gridCheck">
+        Check me out
       </label>
     </div>
   </div>
   <div class="col-12">
-    <button class="btn btn-primary" type="submit">Submit form</button>
+    <button type="submit" class="btn btn-primary">Sign in</button>
   </div>
-</form>
-        
-    );
-}
+
+</form> */}
+</div>
+    )}     
+
 export default Home;

@@ -4,6 +4,7 @@ import axios from "axios";
 import Login from "../Login/login";
 import Register from "../Register/register";
 import LogOut from "../Logout/logout";
+import "./navigationBar.css"
 
 
 function NavigationBar({user}){
@@ -45,8 +46,9 @@ function NavigationBar({user}){
                             <React.Fragment>
                                
                                 <li>
-                                   <LogOut />
-                                    
+                                <div class="d-grid gap-2 col-1 mx-auto">
+                                   <LogOut class="btn btn-outline-primary" />
+                                    </div>
                                 </li>
                                 
                     </React.Fragment>                   

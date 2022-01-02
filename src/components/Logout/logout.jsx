@@ -8,10 +8,12 @@ const LogOut=() =>{
     }
 
     return(
-
+            <li class= "float-right">
              <div>
-                <button className = "LogOut-button" onClick={logout}>LogOut</button>
-            </div>
+                 <div class="d-grid gap-2 col-1 mx-auto float-right">
+                <button type="button"class="btn btn-outline-primary LogOut-button" onClick={logout}>LogOut</button>
+                </div> 
+            </div></li>
 
     )
 }

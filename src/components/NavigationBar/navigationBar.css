@@ -1,0 +1,16 @@
+#navbarNav,#navbarNav h1,nav h3, nav h3:hover, .btn,.btn:hover{
+    color: black;
+    text-shadow: none;
+    border: 2px solid green;
+    padding: 10px;
+    background-color: white;
+}
+h3,a{
+    text-shadow: none;
+    color: black;
+    border: none
+}
+
+.LogOut-button{
+    float: right
+}

@@ -8,7 +8,10 @@
 }
 
 body {
-	background: linear-gradient(90deg, #07a507, #07a507);		
+	/* background: linear-gradient(90deg, #07a507, #07a507);		 */
+	background-image: url("https://ak.picdn.net/shutterstock/videos/29342503/thumb/1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 h3 {

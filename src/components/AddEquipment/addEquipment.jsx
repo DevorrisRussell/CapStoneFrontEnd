@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "./addEquipment.css";
 
 function AddEquipment() {
   const jwt = localStorage.getItem("token");
@@ -18,8 +19,7 @@ function AddEquipment() {
       description: description,
     });
     console.log(response.data);
-    // Save token in local storage and refresh page
-    localStorage.setItem("token", response.data);
+
     window.location = "/Home";
   }
 

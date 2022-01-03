@@ -28,7 +28,9 @@ function AddEquipment() {
       <h1>Add a new Equipment</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group" size="lg" controlId="Name">
-          <label className="form-label">Name of Equipment</label>
+          <label className="form-label">
+            <h2>Name of Equipment</h2>
+          </label>
           <input
             autoFocus
             type="text"
@@ -37,14 +39,16 @@ function AddEquipment() {
           />
 
           <div className="form-group" size="lg" controlId="Description">
-            <label className="form-label">Description</label>
+            <label className="form-label">
+              <h2>Description</h2>
+            </label>
             <textarea
               value={description}
               onChange={(e) => setDescription(e.target.value)}
             ></textarea>
           </div>
         </div>
-        <div class="d-grid gap-2">
+        <div class="d-grid gap-2 col-1 mx-auto float-right">
           <button class="btn btn-secondary" type="submit">
             <h3>Add</h3>
           </button>

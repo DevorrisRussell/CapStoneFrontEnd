@@ -63,6 +63,7 @@ function Equipment() {
         <thead>
           <th>Equipment Type</th>
           <th>Description</th>
+          <th>Date Added</th>
           <th>Status</th>
           <th></th>
         </thead>
@@ -72,6 +73,7 @@ function Equipment() {
               <tr key={equipments._id}>
                 <td>{equipments.name}</td>
                 <td>{equipments.description}</td>
+                <td>{equipments.dateModified}</td>
                 <td>
                   {equipments.isAvailable === true
                     ? "Available"

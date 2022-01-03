@@ -53,6 +53,13 @@ function AddEquipment() {
             <h3>Add</h3>
           </button>
         </div>
+
+        <div class="col-md-3">
+          <img
+            src="https://media.istockphoto.com/photos/using-lawn-mower-picture-id96926811?b=1&k=20&m=96926811&s=170667a&w=0&h=lFvhJ-TI2Tak4dHryZrSeLMcJxPs1qL-lCBOxYdo-Ao="
+            class="rounded float-start"
+          ></img>
+        </div>
       </form>
     </div>
   );

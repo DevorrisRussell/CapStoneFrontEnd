@@ -12,18 +12,24 @@ function NavigationBar({ user }) {
       <div className="collapse navbar-collapse" id="navbarNav">
         {user && <h1>Welcome {user.username}</h1>}
         <ul className="navbar-nav">
-          <li>
-            <Link to="/home">Home</Link>
-          </li>
-          <li>
-            <Link to="/equipment">Equipment</Link>
-          </li>
+          <button type="button" class="btn btn-dark">
+            <li>
+              <Link to="/home">Home</Link>
+            </li>
+          </button>
+          <button type="button" class="btn btn-dark">
+            <li>
+              <Link to="/equipment">Equipment</Link>
+            </li>
+          </button>
 
           {!user && (
             <React.Fragment>
-              <li>
-                <Link to="/register">Register</Link>
-              </li>
+              <button type="button" class="btn btn-dark">
+                <li>
+                  <Link to="/register">Register</Link>
+                </li>
+              </button>
 
               <li>
                 <div class="d-grid gap-2 col-1 mx-auto">

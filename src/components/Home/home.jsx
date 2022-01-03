@@ -1,24 +1,20 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 function Home() {
-   const [userProfile, setUserProfile] = useState();
-  
+  const [userProfile, setUserProfile] = useState();
 
-  
-
-   useEffect(() => {
+  useEffect(() => {
     getCurrentUser();
- }, [])
-    
-    const jwt = localStorage.getItem("token");
-    let configObject = {
-      headers: {
-        "x-auth-token": jwt,
-      },
-    };
-    
+  }, []);
+
+  const jwt = localStorage.getItem("token");
+  let configObject = {
+    headers: {
+      "x-auth-token": jwt,
+    },
+  };
 
   const getCurrentUser = async () => {
     const jwt = localStorage.getItem("token");
@@ -32,21 +28,14 @@ function Home() {
       .then((res) => setUserProfile(res.data));
   };
 
-
-
- 
-  
-  
-  
-
-
-
-    return(
-      <div>
- <h1>{userProfile && userProfile.name}</h1> 
- <Link to="/add">Add Equipment</Link>
-     </div>  
-    )
-    };
+  return (
+    <div>
+      <h1>{userProfile && userProfile.name}</h1>
+      <button type="button" class="btn btn-dark">
+        <Link to="/add">Add Equipment </Link>
+      </button>
+    </div>
+  );
+}
 
 export default Home;

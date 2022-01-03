@@ -30,7 +30,7 @@ function Register() {
     <div className="container">
       <div class="row">
         <div class="col-md-3">
-          <p>Share and borrow equipment with your community</p>
+          <h3>Share and borrow equipment with your community</h3>
         </div>
 
         <div className="card text-black bg-light" style={{ width: "22rem" }}>

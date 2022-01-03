@@ -21,42 +21,44 @@ function Login(props) {
   return (
     <div className="container">
       <div className="row">
-        
-        <div className="col"><h3>Enter Your Information</h3>
-        <div>
-        
-          <div className="card text-white bg-dark" style={{ width: "20rem" }}>
-            <div className="card-body">
-              <form onSubmit={handleSubmit}>
-                <div className="form-group" size="lg" controlId="email">
-                  <label className="form-label">Email</label>
-                  <input
-                    autoFocus
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-
-                  <div className="form-group" size="lg" controlId="password">
-                    <label className="form-label">Password</label>
+        <div className="col">
+          <div class="header">
+            <h2>Tampa Palms Community </h2>
+          </div>
+          <h3>Enter Your Information</h3>
+          <div>
+            <div className="card text-white bg-dark" style={{ width: "20rem" }}>
+              <div className="card-body">
+                <form onSubmit={handleSubmit}>
+                  <div className="form-group" size="lg" controlId="email">
+                    <label className="form-label">Email</label>
                     <input
-                      type="password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
+                      autoFocus
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
+
+                    <div className="form-group" size="lg" controlId="password">
+                      <label className="form-label">Password</label>
+                      <input
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                      />
+                    </div>
                   </div>
-                </div>
-                <div class="d-grid gap-2">
-                  <button class="btn btn-secondary" type="submit">
-                    <h3>Login</h3>
-                  </button>
-                </div>
-              </form>
+                  <div class="d-grid gap-2">
+                    <button class="btn btn-secondary" type="submit">
+                      <h3>Login</h3>
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div> 
     </div>
   );
 }

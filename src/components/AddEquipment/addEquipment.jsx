@@ -11,12 +11,16 @@ function AddEquipment() {
   };
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
+  const [color, setColor] = useState("");
+  const [serialNumber, setserialNumber] = useState("");
 
   async function handleSubmit(event) {
     event.preventDefault();
     let response = await axios.post("http://localhost:5000/api/equipments", {
       name: name,
       description: description,
+      color: color,
+      serialNumber: serialNumber,
     });
     console.log(response.data);
 

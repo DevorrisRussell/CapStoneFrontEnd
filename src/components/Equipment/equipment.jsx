@@ -64,6 +64,8 @@ function Equipment() {
           <th>Equipment Type</th>
           <th>Description</th>
           <th>Date Added</th>
+          <th>Color</th>
+          <th>Serial Number</th>
           <th>Status</th>
           <th></th>
         </thead>
@@ -74,6 +76,8 @@ function Equipment() {
                 <td>{equipments.name}</td>
                 <td>{equipments.description}</td>
                 <td>{equipments.dateModified}</td>
+                <td>{equipments.color}</td>
+                <td>{equipments.serialNumber}</td>
                 <td>
                   {equipments.isAvailable === true
                     ? "Available"

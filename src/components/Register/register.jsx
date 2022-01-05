@@ -9,6 +9,9 @@ function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [Name, setName] = useState("");
+  const [address, setAddress] = useState();
+  const [lat, setLat] = useState("");
+  const [lng, setLng] = useState("");
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -74,6 +77,42 @@ function Register() {
                     onChange={(e) => setPassword(e.target.value)}
                     className="form-control"
                   />
+                </div>
+                <div className="form-group" size="lg" controlId="Street Number">
+                  <label>Street Number</label>
+                  <input
+                    autoFocus
+                    type="Street Number"
+                    value={address}
+                    onChange={(e) => setAddress(e.target.value)}
+                  />
+                </div>
+                <div className="form-group" size="lg" controlId="Street Name">
+                  <label>Street Name</label>
+                  <input
+                    autoFocus
+                    type="Street Name"
+                    value={address}
+                    onChange={(e) => setAddress(e.target.value)}
+                  />
+                  <div className="form-group" size="lg" controlId="City">
+                    <label>City</label>
+                    <input
+                      autoFocus
+                      type="City"
+                      value={address}
+                      onChange={(e) => setAddress(e.target.value)}
+                    />
+                  </div>
+                  <div className="form-group" size="lg" controlId="State">
+                    <label>State</label>
+                    <input
+                      autoFocus
+                      type="State"
+                      value={address}
+                      onChange={(e) => setAddress(e.target.value)}
+                    />
+                  </div>
                   <p>Create an account</p>
                   <button class="btn btn-primary" type="submit">
                     Register

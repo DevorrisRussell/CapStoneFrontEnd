@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@googlemaps/react-wrapper": "^1.1.19",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -12,6 +13,8 @@
     "config": "^3.3.6",
     "cors": "^2.8.5",
     "express": "^4.17.2",
+    "google-map-react": "^2.1.10",
+    "google-maps-react": "^2.0.6",
     "joi": "^17.5.0",
     "jsonwebtoken": "^8.5.1",
     "jwt-decode": "^3.1.2",

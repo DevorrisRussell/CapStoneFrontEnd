@@ -9,6 +9,8 @@ import Login from "./components/Login/login";
 import NavigationBar from "./components/NavigationBar/navigationBar";
 import Equipment from "./components/Equipment/equipment";
 import Logout from "./components/Logout/logout";
+import MyEquipment from "./components/MyEquipment/myEquipment";
+import MapComponent from "./components/Map/Map";
 
 class App extends Component {
   constructor(props) {
@@ -65,7 +67,13 @@ class App extends Component {
           <Equipment path="/Equipment" component={Equipment} />
           <Logout path="/Logout" component={Logout} user={user} />
           <AddEquipment path="/Add" component={AddEquipment} user={user} />
+          <MyEquipment
+            path="/MyEquipment"
+            component={MyEquipment}
+            user={user}
+          />
         </Switch>
+        <MapComponent></MapComponent>
       </div>
     );
   }

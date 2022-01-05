@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import "./equipment.css";
+// import "./equipment.css";
 
 function MyEquipment() {
   const [myequipments, setMyEquipment] = useState([]);
@@ -10,7 +10,7 @@ function MyEquipment() {
     getAllMyEquipment();
   }, []);
 
-  async function getAllEquipment() {
+  async function getAllMyEquipment() {
     const jwt = localStorage.getItem("token");
     let configObject = {
       headers: {
@@ -55,7 +55,7 @@ function MyEquipment() {
 
   return (
     <div>
-      <Link to="/Equipment">
+      <Link to="/Home">
         <h1>My Equipment List</h1>
       </Link>
 
@@ -84,13 +84,13 @@ function MyEquipment() {
                     : "Unavailable"}
                 </td>
                 <td>
-                  <button
+                  {/* <button
                     disabled={!equipments.isAvailable}
-                    onClick={() => rent(equipments._id)}
-                  >
-                    {" "}
-                    Rent{" "}
-                  </button>
+                    onClick={() => rent(equipments._id)} */}
+                  {/* > */}
+                  {/* {" "}
+                    Rent{" "} */}
+                  {/* </button> */}
                 </td>
               </tr>
             ))}

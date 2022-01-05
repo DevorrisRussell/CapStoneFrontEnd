@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Login from "../Login/login";
 import "./register.css";
+import { googleAPIKey } from "../../ApiKeys";
 
 function Register() {
   const [email, setEmail] = useState("");
@@ -11,11 +12,17 @@ function Register() {
 
   async function handleSubmit(event) {
     event.preventDefault();
+    let responseLatLng = await axios.get(
+      `https://maps.googleapis.com/maps/api/geocode/json?address=${Name}&key=${googleAPIKey}`
+    );
     let User = {
       name: Name,
       email: email,
       password: password,
       isAdmin: false,
+      address: null,
+      lat: null,
+      lng: null,
     };
     let response = await axios.post(
       "http://localhost:5000/api/users/register",

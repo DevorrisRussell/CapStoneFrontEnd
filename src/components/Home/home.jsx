@@ -34,8 +34,8 @@ function Home() {
       <h1>{userProfile && userProfile.name}</h1>
       <button type="button" class="btn btn-dark">
         <Link to="/add">Add Equipment </Link>
-        <div>{MyEquipment}</div>
       </button>
+      <MyEquipment />
     </div>
   );
 }

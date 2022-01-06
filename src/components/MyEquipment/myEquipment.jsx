@@ -18,7 +18,7 @@ function MyEquipment() {
       },
     };
     let response = await axios.get(
-      `http://localhost:5000/api/myList/equipments`,
+      `http://localhost:5000/api/current/myList/`,
       configObject
     );
     setMyEquipment(response.data);
@@ -72,7 +72,7 @@ function MyEquipment() {
         <tbody>
           {myList.length > 0 &&
             myList.map((equipments) => (
-              <tr key={myList._id}>
+              <tr key={equipments.myList}>
                 <td>{equipments.name}</td>
                 <td>{equipments.description}</td>
                 <td>{equipments.dateModified}</td>
@@ -82,15 +82,6 @@ function MyEquipment() {
                   {equipments.isAvailable === true
                     ? "Available"
                     : "Unavailable"}
-                </td>
-                <td>
-                  {/* <button
-                    disabled={!equipments.isAvailable}
-                    onClick={() => rent(equipments._id)} */}
-                  {/* > */}
-                  {/* {" "}
-                    Rent{" "} */}
-                  {/* </button> */}
                 </td>
               </tr>
             ))}

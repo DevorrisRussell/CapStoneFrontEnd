@@ -20,7 +20,7 @@ function Register() {
   async function handleSubmit(event) {
     event.preventDefault();
     let responseLatLng = await axios.get(
-      `https://maps.googleapis.com/maps/api/geocode/json?address=${streetNumber}&key=${googleAPIKey}`
+      `https://maps.googleapis.com/maps/api/geocode/json?address=${streetNumber}${streetName}${city}${state}&key=${googleAPIKey}`
     );
     let User = {
       name: Name,
@@ -135,12 +135,11 @@ function Register() {
           </div>
         </div>
         <div class="col-md-3">
-          <Slide left>
-            <img
-              src="https://media.istockphoto.com/photos/lawnmower-picture-id178033413?b=1&k=20&m=178033413&s=170667a&w=0&h=LO6xAQ6O-5SLPqZktnBeI7kTRNin4LCTyiFr9Wb6Qx0="
-              class="rounded float-start"
-            ></img>
-          </Slide>
+          <img
+            src="https://media.istockphoto.com/photos/lawnmower-picture-id178033413?b=1&k=20&m=178033413&s=170667a&w=0&h=LO6xAQ6O-5SLPqZktnBeI7kTRNin4LCTyiFr9Wb6Qx0="
+            class="rounded float-start"
+          ></img>
+
           <img
             src="https://media.istockphoto.com/photos/garden-hand-tools-picture-id168857847?b=1&k=20&m=168857847&s=170667a&w=0&h=v-nWL_ZB4Zu-RP4Dzm27-XE9nq3evB0q0r_bqiJm6AY="
             class="rounded float-start"

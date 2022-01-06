@@ -63,7 +63,7 @@ function AddEquipment() {
               />
               <div className="form-group" size="lg" controlId="Name">
                 <label className="form-label">
-                  <h2>Serial Number</h2>
+                  <h2>Equipment Serial Number</h2>
                 </label>
                 <input
                   autoFocus
@@ -79,12 +79,7 @@ function AddEquipment() {
               </button>
             </div>
 
-            <div class="col-md-3">
-              <img
-                src="https://media.istockphoto.com/photos/using-lawn-mower-picture-id96926811?b=1&k=20&m=96926811&s=170667a&w=0&h=lFvhJ-TI2Tak4dHryZrSeLMcJxPs1qL-lCBOxYdo-Ao="
-                class="rounded float-start"
-              ></img>
-            </div>
+            <div class="col-md-3"></div>
           </div>
         </div>
       </form>

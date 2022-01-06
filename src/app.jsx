@@ -76,7 +76,7 @@ class App extends Component {
           />
           {/* <videoModal /> */}
         </Switch>
-        <MapComponent></MapComponent>
+        {/* <MapComponent></MapComponent> */}
       </div>
     );
   }

@@ -11,7 +11,8 @@ import Equipment from "./components/Equipment/equipment";
 import Logout from "./components/Logout/logout";
 import MyEquipment from "./components/MyEquipment/myEquipment";
 import MapComponent from "./components/Map/Map";
-import VideoItem from "./components/VideoItem/VideoItem";
+
+// import videoModal from "./components/videoModal";
 
 class App extends Component {
   constructor(props) {
@@ -73,7 +74,7 @@ class App extends Component {
             component={MyEquipment}
             user={user}
           />
-          <VideoItem />
+          {/* <videoModal /> */}
         </Switch>
         <MapComponent></MapComponent>
       </div>

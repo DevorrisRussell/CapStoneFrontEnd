@@ -10,18 +10,25 @@ function Register() {
   const [password, setPassword] = useState("");
   const [Name, setName] = useState("");
   const [address, setAddress] = useState();
+  const [streetNumber, setStreetNumber] = useState();
+  const [streetName, setStreetName] = useState();
+  const [city, setCity] = useState();
+  const [state, setState] = useState();
   const [lat, setLat] = useState("");
   const [lng, setLng] = useState("");
 
   async function handleSubmit(event) {
     event.preventDefault();
     let responseLatLng = await axios.get(
-      `https://maps.googleapis.com/maps/api/geocode/json?address=${Name}&key=${googleAPIKey}`
+      `https://maps.googleapis.com/maps/api/geocode/json?address=${streetNumber}&key=${googleAPIKey}`
     );
     let User = {
       name: Name,
       email: email,
-      password: password,
+      streetNumber: streetNumber,
+      streetName: streetName,
+      city: city,
+      state: state,
       isAdmin: false,
       address: null,
       lat: null,
@@ -83,8 +90,8 @@ function Register() {
                   <input
                     autoFocus
                     type="Street Number"
-                    value={address}
-                    onChange={(e) => setAddress(e.target.value)}
+                    value={streetNumber}
+                    onChange={(e) => setStreetNumber(e.target.value)}
                   />
                 </div>
                 <div className="form-group" size="lg" controlId="Street Name">
@@ -92,16 +99,16 @@ function Register() {
                   <input
                     autoFocus
                     type="Street Name"
-                    value={address}
-                    onChange={(e) => setAddress(e.target.value)}
+                    value={streetName}
+                    onChange={(e) => setStreetName(e.target.value)}
                   />
                   <div className="form-group" size="lg" controlId="City">
                     <label>City</label>
                     <input
                       autoFocus
                       type="City"
-                      value={address}
-                      onChange={(e) => setAddress(e.target.value)}
+                      value={city}
+                      onChange={(e) => setCity(e.target.value)}
                     />
                   </div>
                   <div className="form-group" size="lg" controlId="State">
@@ -109,8 +116,8 @@ function Register() {
                     <input
                       autoFocus
                       type="State"
-                      value={address}
-                      onChange={(e) => setAddress(e.target.value)}
+                      value={state}
+                      onChange={(e) => setState(e.target.value)}
                     />
                   </div>
                   <p>Create an account</p>
@@ -128,10 +135,12 @@ function Register() {
           </div>
         </div>
         <div class="col-md-3">
-          <img
-            src="https://media.istockphoto.com/photos/lawnmower-picture-id178033413?b=1&k=20&m=178033413&s=170667a&w=0&h=LO6xAQ6O-5SLPqZktnBeI7kTRNin4LCTyiFr9Wb6Qx0="
-            class="rounded float-start"
-          ></img>
+          <Slide left>
+            <img
+              src="https://media.istockphoto.com/photos/lawnmower-picture-id178033413?b=1&k=20&m=178033413&s=170667a&w=0&h=LO6xAQ6O-5SLPqZktnBeI7kTRNin4LCTyiFr9Wb6Qx0="
+              class="rounded float-start"
+            ></img>
+          </Slide>
           <img
             src="https://media.istockphoto.com/photos/garden-hand-tools-picture-id168857847?b=1&k=20&m=168857847&s=170667a&w=0&h=v-nWL_ZB4Zu-RP4Dzm27-XE9nq3evB0q0r_bqiJm6AY="
             class="rounded float-start"

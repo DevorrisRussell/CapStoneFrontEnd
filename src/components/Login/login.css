@@ -8,7 +8,7 @@
 }
 
 body {
-  background: linear-gradient(90deg, #07a507, #07a507);
+  background: linear-gradient(90deg, #11f811, #11f811);
 }
 
 h3 {
@@ -183,4 +183,8 @@ h3 {
 
 .social-login__icon:hover {
   transform: scale(1.5);
+}
+
+.video_box {
+  float: right;
 }

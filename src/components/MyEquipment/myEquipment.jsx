@@ -25,33 +25,32 @@ function MyEquipment() {
     console.log(response.data);
   }
 
-  //   async function rent(equipmentId) {
-  //     const jwt = localStorage.getItem("token");
-  //     let configObject = {
-  //       headers: {
-  //         "x-auth-token": jwt,
-  //       },
-  //     };
+  async function rent(equipmentId) {
+    const jwt = localStorage.getItem("token");
+    let configObject = {
+      headers: {
+        "x-auth-token": jwt,
+      },
+    };
 
-  // try {
-  //   let response = await axios.put(
-  //     `http://localhost:5000/api/myList/equipments`,
-  //     {},
-  //     configObject
-  //   );
-  //   if (response.status === 200) {
-  //     const updatedEquipments = myList.map((equipment) => {
-  //       if (equipment.myList === myList) {
-  //         equipment.isAvailable = false;
-  //       }
-  //       return equipment;
-  //     });
-  //     setEquipment(updatedEquipments);
-  //   }
-  //     } catch (err) {
-  //       console.log(err);
-  //     }
-  //   }
+    try {
+      let response = await axios.put(
+        `http://localhost:5000/api/current/myList/`,
+        {},
+        configObject
+      );
+      if (response.status === 200) {
+        const updatedEquipments = myList.map((equipment) => {
+          if (equipment.myList === myList) {
+            equipment.isAvailable = false;
+          }
+          return equipment;
+        });
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
   return (
     <div>
@@ -71,17 +70,15 @@ function MyEquipment() {
         </thead>
         <tbody>
           {myList.length > 0 &&
-            myList.map((equipments) => (
-              <tr key={equipments.myList}>
-                <td>{equipments.name}</td>
-                <td>{equipments.description}</td>
-                <td>{equipments.dateModified}</td>
-                <td>{equipments.color}</td>
-                <td>{equipments.serialNumber}</td>
+            myList.map((myList) => (
+              <tr key={myList.myList}>
+                <td>{myList.name}</td>
+                <td>{myList.description}</td>
+                <td>{myList.dateModified}</td>
+                <td>{myList.color}</td>
+                <td>{myList.serialNumber}</td>
                 <td>
-                  {equipments.isAvailable === true
-                    ? "Available"
-                    : "Unavailable"}
+                  {myList.isAvailable === true ? "Available" : "Unavailable"}
                 </td>
               </tr>
             ))}
@@ -90,4 +87,5 @@ function MyEquipment() {
     </div>
   );
 }
+
 export default MyEquipment;

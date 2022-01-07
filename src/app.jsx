@@ -12,8 +12,6 @@ import Logout from "./components/Logout/logout";
 import MyEquipment from "./components/MyEquipment/myEquipment";
 import MapComponent from "./components/Map/Map";
 
-// import videoModal from "./components/videoModal";
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -74,7 +72,6 @@ class App extends Component {
             component={MyEquipment}
             user={user}
           />
-          {/* <videoModal /> */}
         </Switch>
         {/* <MapComponent></MapComponent> */}
       </div>

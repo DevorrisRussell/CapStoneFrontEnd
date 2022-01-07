@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+
 import "./login.css";
 
 function Login(props) {
@@ -21,6 +22,7 @@ function Login(props) {
   return (
     <div className="container">
       <div className="row">
+        <div class="col-md-3"></div>
         <div className="col">
           <div class="header">
             <h2>Tampa Palms Community </h2>
@@ -55,6 +57,22 @@ function Login(props) {
                   </div>
                 </form>
               </div>
+            </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-3">
+              <section>
+                <div class="video-box">
+                  <div class="wrapper">
+                    <iframe
+                      width="300"
+                      height="315"
+                      src="https://www.youtube.com/embed/dqF4b1SboLk"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    ></iframe>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
         </div>

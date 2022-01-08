@@ -73,7 +73,6 @@ class App extends Component {
             user={user}
           />
         </Switch>
-        {/* <MapComponent></MapComponent> */}
       </div>
     );
   }

@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 // import "./equipment.css";
+import Map from "../Map/Map";
 
 function MyEquipment() {
-  const [myequipments, setMyEquipment] = useState([]);
-  const [myList, setMyDesc] = useState([]);
+  const [myEquipments, setMyEquipment] = useState([]);
+
   useEffect(() => {
     getAllMyEquipment();
   }, []);
@@ -17,12 +18,16 @@ function MyEquipment() {
         "x-auth-token": jwt,
       },
     };
-    let response = await axios.get(
-      `http://localhost:5000/api/current/myList/`,
-      configObject
-    );
-    setMyEquipment(response.data);
-    console.log(response.data);
+    try {
+      let response = await axios.get(
+        `http://localhost:5000/api/users/current/myList/`,
+        configObject
+      );
+      setMyEquipment(response.data);
+      console.log("My equpment??", response.data);
+    } catch (err) {
+      console.log("err", err);
+    }
   }
 
   async function rent(equipmentId) {
@@ -34,14 +39,14 @@ function MyEquipment() {
     };
 
     try {
-      let response = await axios.put(
-        `http://localhost:5000/api/current/myList/`,
+      let response = await axios.get(
+        `http://localhost:5000/api/users/current/myList`,
         {},
         configObject
       );
       if (response.status === 200) {
-        const updatedEquipments = myList.map((equipment) => {
-          if (equipment.myList === myList) {
+        const updatedEquipments = myEquipments.map((equipment) => {
+          if (equipment.myEquipments === myEquipments) {
             equipment.isAvailable = false;
           }
           return equipment;
@@ -66,24 +71,28 @@ function MyEquipment() {
           <th>Color</th>
           <th>Serial Number</th>
           <th>Status</th>
-          <th></th>
+          <th>Address</th>
         </thead>
         <tbody>
-          {myList.length > 0 &&
-            myList.map((myList) => (
-              <tr key={myList.myList}>
-                <td>{myList.name}</td>
-                <td>{myList.description}</td>
-                <td>{myList.dateModified}</td>
-                <td>{myList.color}</td>
-                <td>{myList.serialNumber}</td>
+          {myEquipments.length > 0 &&
+            myEquipments.map((equipment) => (
+              <tr key={equipment._id}>
+                <td>{equipment.name}</td>
+                <td>{equipment.description}</td>
+                <td>{equipment.dateModified}</td>
+                <td>{equipment.color}</td>
+                <td>{equipment.serialNumber}</td>
                 <td>
-                  {myList.isAvailable === true ? "Available" : "Unavailable"}
+                  {equipment.isAvailable === true ? "Available" : "Rented"}
+                </td>
+                <td>
+                  {equipment.rentedAddress ? equipment.rentedAddress : "N/A"}
                 </td>
               </tr>
             ))}
         </tbody>
       </table>
+      <Map myEquipments={myEquipments} />
     </div>
   );
 }

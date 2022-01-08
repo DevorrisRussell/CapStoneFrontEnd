@@ -16,12 +16,22 @@ function AddEquipment() {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    let response = await axios.post("http://localhost:5000/api/equipments", {
-      name: name,
-      description: description,
-      color: color,
-      serialNumber: serialNumber,
-    });
+    const jwt = localStorage.getItem("token");
+    let configObject = {
+      headers: {
+        "x-auth-token": jwt,
+      },
+    };
+    let response = await axios.post(
+      "http://localhost:5000/api/equipments",
+      {
+        name: name,
+        description: description,
+        color: color,
+        serialNumber: serialNumber,
+      },
+      configObject
+    );
     console.log(response.data);
 
     window.location = "/Home";

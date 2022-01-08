@@ -22,17 +22,20 @@ function Register() {
     let responseLatLng = await axios.get(
       `https://maps.googleapis.com/maps/api/geocode/json?address=${streetNumber}${streetName}${city}${state}&key=${googleAPIKey}`
     );
+    console.log("responselatlng", responseLatLng);
+    // );
     let User = {
       name: Name,
       email: email,
+      password: password,
       streetNumber: streetNumber,
       streetName: streetName,
       city: city,
       state: state,
       isAdmin: false,
-      address: null,
-      lat: null,
-      lng: null,
+      address: responseLatLng.data.results[0].formatted_address,
+      lat: responseLatLng.data.results[0].geometry.location.lat,
+      lng: responseLatLng.data.results[0].geometry.location.lng,
     };
     let response = await axios.post(
       "http://localhost:5000/api/users/register",

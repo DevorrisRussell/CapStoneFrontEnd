@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
 import { googleAPIKey } from "../../ApiKeys";
 
@@ -8,6 +8,7 @@ const mapStyles = {
 };
 
 function MapComponent(props) {
+  console.log(props.myEquipments);
   return (
     <div>
       <Map
@@ -19,7 +20,12 @@ function MapComponent(props) {
           lng: -82.40952070000002,
         }}
       >
-        <Marker name={"I Live Here!"}></Marker>
+        {props.myEquipments.map((equipment) => (
+          <Marker
+            name={"I Live Here!"}
+            position={{ lat: equipment.lat, lng: equipment.lng }}
+          ></Marker>
+        ))}
       </Map>
     </div>
   );

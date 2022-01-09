@@ -1,6 +1,6 @@
 // import React, { useState, useEffect } from "react";
 // import axios from "axios";
-// import "./addEquipment.css";
+
 
 // function DeleteEquipment() {
 //   const jwt = localStorage.getItem("token");
@@ -16,7 +16,7 @@
 
 //   async function handleSubmit(event) {
 //     event.preventDefault();
-//     let response = await axios.post("http://localhost:5000/api/equipments", {
+//     let response = await axios.delete("http://localhost:5000/api/equipmentId", {
 //       name: name,
 //       description: description,
 //       color: color,

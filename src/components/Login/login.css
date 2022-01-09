@@ -8,7 +8,8 @@
 }
 
 body {
-  background: linear-gradient(90deg, #11f811, #11f811);
+  background: rgb(231, 232, 233);
+  min-height: 100vh;
 }
 
 h3 {

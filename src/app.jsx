@@ -41,8 +41,6 @@ class App extends Component {
 
   render() {
     let user = this.state.user;
-    console.log(user);
-
     return (
       <div>
         <NavigationBar user={user} />
@@ -67,11 +65,6 @@ class App extends Component {
           <Equipment path="/Equipment" component={Equipment} />
           <Logout path="/Logout" component={Logout} user={user} />
           <AddEquipment path="/Add" component={AddEquipment} user={user} />
-          <MyEquipment
-            path="/MyEquipment"
-            component={MyEquipment}
-            user={user}
-          />
         </Switch>
       </div>
     );

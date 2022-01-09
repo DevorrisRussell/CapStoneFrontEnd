@@ -1,16 +1,52 @@
-#navbarNav,#navbarNav h1,nav h3, nav h3:hover, .btn,.btn:hover{
-    color: black;
-    text-shadow: none;
-    border: 2px solid green;
-    padding: 10px;
-    background-color: white;
+#navbarNav,
+#navbarNav h1,
+nav h3,
+nav h3:hover,
+.btn,
+.btn:hover {
+  color: black;
+  text-shadow: none;
+  border: 2px solid green;
+  padding: 10px;
+  background-color: white;
 }
-h3,a{
-    text-shadow: none;
-    color: black;
-    border: none
+h3,
+a {
+  text-shadow: none;
+  color: black;
+  border: none;
 }
 
-.LogOut-button{
-    float: right
+#navbarNav li:first-child {
+  margin-right: auto;
+}
+#navbarNav li:last-child {
+  margin-right: 2em;
+}
+
+.LogOut-button {
+  float: right;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+.navbar-nav li {
+  margin: 0 1em;
+}
+.navbar-nav li a {
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.navbar {
+  padding: 0 !important;
+  border: none;
+}
+
+#navbarNav {
+  border: none;
 }

@@ -6,6 +6,7 @@ import Map from "../Map/Map";
 
 function MyEquipment() {
   const [myEquipments, setMyEquipment] = useState([]);
+  const [deleteMyEquipment, setDeleteMyEquipment] = useState([]);
 
   useEffect(() => {
     getAllMyEquipment();
@@ -25,6 +26,33 @@ function MyEquipment() {
       );
       setMyEquipment(response.data);
       console.log("My equpment??", response.data);
+    } catch (err) {
+      console.log("err", err);
+    }
+  }
+
+  async function deleteEquipment(equipment_id) {
+    const jwt = localStorage.getItem("token");
+    let configObject = {
+      headers: {
+        "x-auth-token": jwt,
+      },
+    };
+
+    try {
+      let response = await axios.delete(
+        `http://localhost:5000/api/users/current/myList/${equipment_id}`,
+        configObject
+      );
+      // Delete the equipment off the table by removing it from the myEquipments state
+      const remainingEquipments = myEquipments.filter((equipment) => {
+        if (equipment._id === equipment_id) {
+          return false;
+        } else {
+          return true;
+        }
+      });
+      setMyEquipment(remainingEquipments);
     } catch (err) {
       console.log("err", err);
     }
@@ -59,10 +87,7 @@ function MyEquipment() {
 
   return (
     <div>
-      <Link to="/Home">
-        <h1>My Equipment List</h1>
-      </Link>
-
+      <h1>My Equipment List</h1>
       <table id="layout">
         <thead>
           <th> Equipment Type</th>
@@ -72,6 +97,7 @@ function MyEquipment() {
           <th>Serial Number</th>
           <th>Status</th>
           <th>Address</th>
+          <th></th>
         </thead>
         <tbody>
           {myEquipments.length > 0 &&
@@ -87,6 +113,11 @@ function MyEquipment() {
                 </td>
                 <td>
                   {equipment.rentedAddress ? equipment.rentedAddress : "N/A"}
+                </td>
+                <td>
+                  <button onClick={() => deleteEquipment(equipment._id)}>
+                    Delete
+                  </button>
                 </td>
               </tr>
             ))}

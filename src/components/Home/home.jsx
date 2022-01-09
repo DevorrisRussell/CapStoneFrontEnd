@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import MyEquipment from "../MyEquipment/myEquipment";
+import "./home.css";
 
 function Home() {
   const [userProfile, setUserProfile] = useState();
@@ -30,11 +31,7 @@ function Home() {
   };
 
   return (
-    <div>
-      <h1>{userProfile && userProfile.name}</h1>
-      <button type="button" class="btn btn-dark">
-        <Link to="/add">Add Equipment </Link>
-      </button>
+    <div className="homeContainer">
       <MyEquipment />
     </div>
   );

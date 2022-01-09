@@ -10,40 +10,42 @@ function NavigationBar({ user }) {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-light">
       <div className="collapse navbar-collapse" id="navbarNav">
-        {user && <h1>Welcome {user.username}</h1>}
         <ul className="navbar-nav">
-          <button type="button" class="btn btn-dark">
+          {user && (
             <li>
-              <Link to="/home">Home</Link>
+              <h1>Welcome {user.name}</h1>
             </li>
-          </button>
-          <button type="button" class="btn btn-dark">
-            <li>
-              <Link to="/equipment">Equipment</Link>
-            </li>
-          </button>
+          )}
+          <li>
+            <Link to="/home">Home</Link>
+          </li>
+
+          <li>
+            <Link to="/equipment">Equipment</Link>
+          </li>
 
           {!user && (
             <React.Fragment>
-              <button type="button" class="btn btn-dark">
-                <li>
-                  <Link to="/register">Register</Link>
-                </li>
-              </button>
+              <li>
+                <Link to="/register">Register</Link>
+              </li>
 
               <li>
-                <div class="d-grid gap-2 col-1 mx-auto">
-                  <Link to="/Login">Login</Link>
-                </div>
+                <Link to="/Login">Login</Link>
               </li>
             </React.Fragment>
           )}
           {user && (
             <React.Fragment>
               <li>
-                <div class="d-grid gap-2 col-1 mx-auto">
-                  <LogOut class="btn btn-outline-primary" />
-                </div>
+                <Link to="/add">Add Equipment</Link>
+              </li>
+            </React.Fragment>
+          )}
+          {user && (
+            <React.Fragment>
+              <li>
+                <LogOut class="btn btn-outline-primary" />
               </li>
             </React.Fragment>
           )}

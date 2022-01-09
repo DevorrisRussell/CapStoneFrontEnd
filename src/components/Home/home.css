@@ -1,7 +1,9 @@
-.homecontainer{
-    display: flex;
-    width: 100%;
+.cardcomment {
+  background-color: darkgray;
 }
-.cardcomment{
-    background-color: darkgray;
+
+.homeContainer a {
+  font-size: 20px;
+  text-decoration: none;
+  margin-left: 1em;
 }

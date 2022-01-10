@@ -1,0 +1,9 @@
+body {
+  background-color: #edf5e1 !important;
+  min-height: 100vh;
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}

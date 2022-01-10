@@ -1,0 +1,33 @@
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+
+  max-width: 1700px;
+
+  padding-right: 30px;
+}
+
+.loginWrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.loginWrapper h2 {
+  text-align: center;
+  margin-bottom: 2em;
+}
+.loginWrapper h3 {
+  text-align: center;
+}
+
+.loginContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.loginCard .card-body {
+  padding: 0;
+}
+.loginCard .form-group {
+  margin-bottom: 1em;
+}

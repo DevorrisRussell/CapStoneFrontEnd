@@ -8,7 +8,7 @@ import "./navigationBar.css";
 
 function NavigationBar({ user }) {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-light">
+    <nav className="navbar navbar-expand-lg">
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
           {user && (

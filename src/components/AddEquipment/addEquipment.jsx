@@ -40,6 +40,8 @@ function AddEquipment() {
   return (
     <div>
       <h1>Add a new Equipment</h1>
+      <row>  
+      
       <form onSubmit={handleSubmit}>
         <div className="form-group" size="lg" controlId="Name">
           <label className="form-label">
@@ -93,7 +95,9 @@ function AddEquipment() {
           </div>
         </div>
       </form>
+      </row>
     </div>
+   
   );
 }
 

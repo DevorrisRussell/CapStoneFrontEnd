@@ -11,7 +11,7 @@ import Equipment from "./components/Equipment/equipment";
 import Logout from "./components/Logout/logout";
 import MyEquipment from "./components/MyEquipment/myEquipment";
 import MapComponent from "./components/Map/Map";
-
+import "./App.css";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -44,28 +44,29 @@ class App extends Component {
     return (
       <div>
         <NavigationBar user={user} />
+        <div className="main-container">
+          <Switch>
+            <Route
+              path="/"
+              exact
+              render={(props) => {
+                if (!user) {
+                  return <Redirect to="/register" />;
+                } else {
+                  return <Register {...props} user={user} />;
+                }
+              }}
+            />
 
-        <Switch>
-          <Route
-            path="/"
-            exact
-            render={(props) => {
-              if (!user) {
-                return <Redirect to="/register" />;
-              } else {
-                return <Register {...props} user={user} />;
-              }
-            }}
-          />
-
-          <Register path="/Register" component={Register} />
-          <Login path="/Login" component={Login} />
-          <Home path="/Home" component={Home} />
-          <NavigationBar path="/NavigationBar" component={NavigationBar} />
-          <Equipment path="/Equipment" component={Equipment} />
-          <Logout path="/Logout" component={Logout} user={user} />
-          <AddEquipment path="/Add" component={AddEquipment} user={user} />
-        </Switch>
+            <Register path="/Register" component={Register} />
+            <Login path="/Login" component={Login} />
+            <Home path="/Home" component={Home} />
+            <NavigationBar path="/NavigationBar" component={NavigationBar} />
+            <Equipment path="/Equipment" component={Equipment} />
+            <Logout path="/Logout" component={Logout} user={user} />
+            <AddEquipment path="/Add" component={AddEquipment} user={user} />
+          </Switch>
+        </div>
       </div>
     );
   }

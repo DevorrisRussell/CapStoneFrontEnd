@@ -55,7 +55,7 @@ function Equipment() {
 
   return (
     <div>
-      <Link to="/Equipment">
+      <Link to="/Equipment" style={{ textDecoration: "none" }}>
         <h1>Equipment List</h1>
       </Link>
 

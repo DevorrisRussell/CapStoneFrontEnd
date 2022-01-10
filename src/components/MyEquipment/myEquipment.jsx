@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-// import "./equipment.css";
+import "./myEquipment.css";
 import Map from "../Map/Map";
 
 function MyEquipment() {
@@ -97,7 +97,7 @@ function MyEquipment() {
           <th>Serial Number</th>
           <th>Status</th>
           <th>Address</th>
-          <th></th>
+          <th>Delete Equipment</th>
         </thead>
         <tbody>
           {myEquipments.length > 0 &&

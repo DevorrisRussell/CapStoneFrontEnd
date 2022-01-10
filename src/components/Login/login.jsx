@@ -22,7 +22,9 @@ function Login(props) {
   return (
     <div className="container">
       <div className="row">
-        <div class="col-md-3"></div>
+        <div class="col-md-2">
+          <p></p>
+        </div>
         <div className="col">
           <div class="header">
             <h2>Tampa Palms Community </h2>
@@ -59,21 +61,21 @@ function Login(props) {
               </div>
             </div>
             <div class="col-md-3"></div>
-            <div class="col-md-3">
-              <section>
-                <div class="video-box">
-                  <div class="wrapper">
-                    <iframe
-                      width="300"
-                      height="315"
-                      src="https://www.youtube.com/embed/dqF4b1SboLk"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    ></iframe>
-                  </div>
+            <div class="col-md-4"></div>
+
+            <section>
+              <div class="col-md-3 video-box">
+                <div class="wrapper">
+                  <iframe
+                    width="300"
+                    height="315"
+                    src="https://www.youtube.com/embed/dqF4b1SboLk"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  ></iframe>
                 </div>
-              </section>
-            </div>
+              </div>
+            </section>
           </div>
         </div>
       </div>

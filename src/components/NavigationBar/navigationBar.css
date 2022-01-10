@@ -19,6 +19,7 @@ a {
 
 #navbarNav li:first-child {
   margin-right: auto;
+  background-color: white;
 }
 #navbarNav li:last-child {
   margin-right: 2em;

@@ -36,7 +36,7 @@ function Login(props) {
               <div className="card-body">
                 <form onSubmit={handleSubmit}>
                   <div className="form-group" size="lg" controlId="email">
-                    <label className="form-label">Email</label>
+                    <label className="form">Email</label>
                     <input
                       autoFocus
                       type="email"
@@ -45,7 +45,7 @@ function Login(props) {
                     />
                   </div>
                   <div className="form-group" size="lg" controlId="password">
-                    <label className="form-label">Password</label>
+                    <label className="form">Password</label>
                     <input
                       type="password"
                       value={password}

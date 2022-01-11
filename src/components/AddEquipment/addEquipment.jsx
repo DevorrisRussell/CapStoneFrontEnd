@@ -47,8 +47,9 @@ function AddEquipment() {
               <h2>Equipment</h2>
             </label>
             <input
+              className="input-add"
               autoFocus
-              type="text"
+              type="text-name"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
@@ -57,19 +58,22 @@ function AddEquipment() {
               <label className="form-label">
                 <h2>Description</h2>
               </label>
-              <textarea
+              <input
+                className="input-add"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
-              ></textarea>
+              ></input>
 
               <div className="form-group" size="lg" controlId="Name">
                 <label className="form-label">
                   <h2>Color</h2>
                 </label>
                 <input
+                  className="input-add"
                   autoFocus
                   type="text"
                   value={color}
+                  id="colorField"
                   onChange={(e) => setColor(e.target.value)}
                 />
                 <div className="form-group" size="lg" controlId="Name">
@@ -77,9 +81,11 @@ function AddEquipment() {
                     <h2>Serial Number</h2>
                   </label>
                   <input
+                    className="input-add"
                     autoFocus
                     type="text"
                     value={serialNumber}
+                    id="serialNumberField"
                     onChange={(e) => setserialNumber(e.target.value)}
                   />
                 </div>

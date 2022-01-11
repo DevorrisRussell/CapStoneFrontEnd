@@ -48,9 +48,9 @@ function Register() {
 
   return (
     <div className="container registerContainer">
-      <h3>Share and borrow equipment with your community</h3>
+      <h2>Share and borrow equipment with your community</h2>
 
-      <div className="card text-black bg-light" style={{ width: "22rem" }}>
+      <div className="card text-black bg-light" style={{ width: "28rem" }}>
         <div className="card-body">
           <div class="col-md-10">
             <form onSubmit={handleSubmit}>
@@ -82,7 +82,6 @@ function Register() {
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="form-control"
                 />
               </div>
               <div className="form-group" size="lg" controlId="Street Number">
@@ -133,21 +132,6 @@ function Register() {
             </Link>
           </div>
         </div>
-      </div>
-      <div class="col-md-3">
-        <img
-          src="https://media.istockphoto.com/photos/lawnmower-picture-id178033413?b=1&k=20&m=178033413&s=170667a&w=0&h=LO6xAQ6O-5SLPqZktnBeI7kTRNin4LCTyiFr9Wb6Qx0="
-          class="rounded float-start"
-        ></img>
-
-        <img
-          src="https://media.istockphoto.com/photos/garden-hand-tools-picture-id168857847?b=1&k=20&m=168857847&s=170667a&w=0&h=v-nWL_ZB4Zu-RP4Dzm27-XE9nq3evB0q0r_bqiJm6AY="
-          class="rounded float-start"
-        ></img>
-        <img
-          src="https://media.istockphoto.com/photos/yard-edger-in-action-picture-id157642264?b=1&k=20&m=157642264&s=170667a&w=0&h=f0dILmc1iNYaRNGLkghaLx3-ESAVF4IA9nc4Dd14tbY="
-          class="rounded float-start"
-        ></img>
       </div>
     </div>
   );

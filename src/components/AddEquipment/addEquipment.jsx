@@ -40,64 +40,62 @@ function AddEquipment() {
   return (
     <div>
       <h1>Add a new Equipment</h1>
-      <row>  
-      
-      <form onSubmit={handleSubmit}>
-        <div className="form-group" size="lg" controlId="Name">
-          <label className="form-label">
-            <h2>Name of Equipment</h2>
-          </label>
-          <input
-            autoFocus
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-
-          <div className="form-group" size="lg" controlId="Description">
+      <row>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group" size="lg" controlId="Name">
             <label className="form-label">
-              <h2>Description</h2>
+              <h2>Equipment</h2>
             </label>
-            <textarea
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
-            ></textarea>
+            <input
+              autoFocus
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
 
-            <div className="form-group" size="lg" controlId="Name">
+            <div className="form-group" size="lg" controlId="Description">
               <label className="form-label">
-                <h2>Color</h2>
+                <h2>Description</h2>
               </label>
-              <input
-                autoFocus
-                type="text"
-                value={color}
-                onChange={(e) => setColor(e.target.value)}
-              />
+              <textarea
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+              ></textarea>
+
               <div className="form-group" size="lg" controlId="Name">
                 <label className="form-label">
-                  <h2>Equipment Serial Number</h2>
+                  <h2>Color</h2>
                 </label>
                 <input
                   autoFocus
                   type="text"
-                  value={serialNumber}
-                  onChange={(e) => setserialNumber(e.target.value)}
+                  value={color}
+                  onChange={(e) => setColor(e.target.value)}
                 />
+                <div className="form-group" size="lg" controlId="Name">
+                  <label className="form-label">
+                    <h2>Serial Number</h2>
+                  </label>
+                  <input
+                    autoFocus
+                    type="text"
+                    value={serialNumber}
+                    onChange={(e) => setserialNumber(e.target.value)}
+                  />
+                </div>
               </div>
-            </div>
-            <div class="d-grid gap-2 col-1 mx-auto float-right">
-              <button class="btn btn-secondary" type="submit">
-                <h3>Add</h3>
-              </button>
-            </div>
+              <div class="d-grid gap-2 col-1 mx-auto float-right">
+                <button class="btn btn-secondary" type="submit">
+                  <h3>Add</h3>
+                </button>
+              </div>
 
-            <div class="col-md-3"></div>
+              <div class="col-md-3"></div>
+            </div>
           </div>
-        </div>
-      </form>
+        </form>
       </row>
     </div>
-   
   );
 }
 

@@ -4,3 +4,17 @@ h1 {
 
   padding: 10px;
 }
+label {
+  display: inline-block;
+
+  clear: left;
+  width: 250px;
+  text-align: right;
+  padding-left: 1em;
+  padding-top: 3rem;
+}
+input {
+  display: inline-block;
+
+  padding-left: 2em;
+}

@@ -16,12 +16,29 @@ img {
   margin-bottom: 1em;
 }
 .registerContainer form {
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
 
-.State {
-  margin-left: 2em;
-}
 .buttonField {
   background-color: #5cdb95;
+}
+#formName input {
+  margin-left: 2.6em;
+}
+
+#formEmail input {
+  margin-left: 5em;
+  margin-bottom: 0.4em;
+}
+#formPassword input {
+  margin-left: 3.3em;
+  margin-bottom: 0.4em;
+}
+#formStreetNumber input {
+  margin-left: 0.9em;
+  margin-bottom: 0.4em;
+}
+#formStreetName input {
+  margin-left: 0.9em;
+  margin-bottom: 0.4em;
 }

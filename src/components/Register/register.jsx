@@ -55,7 +55,7 @@ function Register() {
           <div class="col-md-10">
             <form onSubmit={handleSubmit}>
               <div className="form-group" size="lg" controlId="name">
-                <label className="form-label">
+                <label className="form-label" id="formName">
                   <h2>Enter your information</h2>
                   <label>Name</label>
 
@@ -67,7 +67,12 @@ function Register() {
                   />
                 </label>
               </div>
-              <div className="form-group" size="lg" controlId="email">
+              <div
+                className="form-group"
+                size="lg"
+                controlId="email"
+                id="formEmail"
+              >
                 <label>Email</label>
                 <input
                   autoFocus
@@ -76,7 +81,12 @@ function Register() {
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
-              <div className="form-group" size="lg" controlId="password">
+              <div
+                className="form-group"
+                size="lg"
+                controlId="password"
+                id="formPassword"
+              >
                 <label>Password</label>
                 <input
                   type="password"
@@ -84,7 +94,12 @@ function Register() {
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
-              <div className="form-group" size="lg" controlId="Street Number">
+              <div
+                className="form-group"
+                size="lg"
+                controlId="Street Number"
+                id="formStreetNumber"
+              >
                 <label>Street Number</label>
                 <input
                   autoFocus
@@ -102,7 +117,7 @@ function Register() {
                   onChange={(e) => setStreetName(e.target.value)}
                 />
                 <div className="form-group" size="lg" controlId="City">
-                  <label>City</label>
+                  <label id="cityForm">City</label>
                   <input
                     autoFocus
                     type="City"
@@ -116,11 +131,11 @@ function Register() {
                     autoFocus
                     type="State"
                     value={state}
-                    id="State"
+                    id="stateField"
                     onChange={(e) => setState(e.target.value)}
                   />
                 </div>
-                <p>Create an account</p>
+                <h3>Create an account</h3>
                 <button class="buttonField" type="submit">
                   Register
                 </button>

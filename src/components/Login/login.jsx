@@ -38,6 +38,7 @@ function Login(props) {
                   <div className="form-group" size="lg" controlId="email">
                     <label className="form">Email</label>
                     <input
+                      className="input-login"
                       autoFocus
                       type="email"
                       value={email}
@@ -49,6 +50,7 @@ function Login(props) {
                     <input
                       type="password"
                       value={password}
+                      id="input-password"
                       onChange={(e) => setPassword(e.target.value)}
                     />
                   </div>

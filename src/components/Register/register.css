@@ -3,7 +3,7 @@ img {
   border-radius: 4px;
   padding: 1px;
   width: 150px;
-  object-position: top;
+  object-position: right;
 }
 
 .registerContainer {
@@ -17,4 +17,11 @@ img {
 }
 .registerContainer form {
   margin-bottom: 2em;
+}
+
+.State {
+  margin-left: 2em;
+}
+.buttonField {
+  background-color: #5cdb95;
 }

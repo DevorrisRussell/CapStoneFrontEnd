@@ -3,6 +3,7 @@
   margin-left: auto;
 
   max-width: 1700px;
+  background-color: #5cdb95;
 
   padding-right: 30px;
 }
@@ -30,4 +31,11 @@
 }
 .loginCard .form-group {
   margin-bottom: 1em;
+}
+.form {
+  margin-left: 0.5em;
+}
+
+.input-login {
+  align-self: auto;
 }

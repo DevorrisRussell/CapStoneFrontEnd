@@ -116,17 +116,18 @@ function Register() {
                     autoFocus
                     type="State"
                     value={state}
+                    id="State"
                     onChange={(e) => setState(e.target.value)}
                   />
                 </div>
                 <p>Create an account</p>
-                <button class="btn btn-primary" type="submit">
+                <button class="buttonField" type="submit">
                   Register
                 </button>
               </div>
             </form>
             <Link to="/Login">
-              <button className="btn btn-primary">
+              <button className="buttonField">
                 Already a user? Login Here
               </button>
             </Link>

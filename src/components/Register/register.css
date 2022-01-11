@@ -13,17 +13,18 @@ img {
   align-items: center;
 }
 .registerContainer h3 {
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 .registerContainer form {
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 }
 
 .buttonField {
   background-color: #5cdb95;
 }
 #formName input {
-  margin-left: 2.6em;
+  margin-left: 4.7em;
+  margin-bottom: 0.4em;
 }
 
 #formEmail input {
@@ -47,4 +48,7 @@ img {
 }
 #formState input {
   margin-left: 5.1em;
+}
+label :first-child {
+  margin-right: 0em;
 }

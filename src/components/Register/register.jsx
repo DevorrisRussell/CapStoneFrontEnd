@@ -54,26 +54,30 @@ function Register() {
         <div className="card-body">
           <div class="col-md-10">
             <form onSubmit={handleSubmit}>
-              <div className="form-group" size="lg" controlId="name">
-                <label className="form-label" id="formName">
-                  <h2>Enter your information</h2>
-                  <label>Name</label>
+              <h2>Enter your information</h2>
 
-                  <input
-                    autoFocus
-                    type="Name"
-                    value={Name}
-                    onChange={(e) => setName(e.target.value)}
-                  />
-                </label>
+              <div
+                className="form-group"
+                size="lg"
+                controlId="name"
+                id="formName"
+              >
+                <label>Name:</label>
+                <input
+                  autoFocus
+                  type="Name"
+                  value={Name}
+                  onChange={(e) => setName(e.target.value)}
+                />
               </div>
+
               <div
                 className="form-group"
                 size="lg"
                 controlId="email"
                 id="formEmail"
               >
-                <label>Email</label>
+                <label>Email:</label>
                 <input
                   autoFocus
                   type="email"
@@ -87,7 +91,7 @@ function Register() {
                 controlId="password"
                 id="formPassword"
               >
-                <label>Password</label>
+                <label>Password:</label>
                 <input
                   type="password"
                   value={password}
@@ -100,7 +104,7 @@ function Register() {
                 controlId="Street Number"
                 id="formStreetNumber"
               >
-                <label>Street Number</label>
+                <label>Street Number:</label>
                 <input
                   autoFocus
                   type="Street Number"
@@ -114,7 +118,7 @@ function Register() {
                 controlId="Street Name"
                 id="formStreetName"
               >
-                <label>Street Name</label>
+                <label>Street Name:</label>
                 <input
                   autoFocus
                   type="Street Name"
@@ -127,7 +131,7 @@ function Register() {
                   controlId="City"
                   id="formCity"
                 >
-                  <label id="cityForm">City</label>
+                  <label id="cityForm">City:</label>
                   <input
                     autoFocus
                     type="City"
@@ -141,7 +145,7 @@ function Register() {
                   controlId="State"
                   id="formState"
                 >
-                  <label>State</label>
+                  <label>State:</label>
                   <input
                     autoFocus
                     type="State"

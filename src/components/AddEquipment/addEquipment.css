@@ -14,3 +14,10 @@
 #serialNumberField {
   margin-left: 2em;
 }
+#descrip {
+  margin-left: 4.5em;
+}
+
+.colorButton {
+  background-color: #5cdb95;
+}

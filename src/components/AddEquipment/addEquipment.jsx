@@ -39,7 +39,7 @@ function AddEquipment() {
 
   return (
     <div>
-      <h1>Add a new Equipment</h1>
+      <h1>Add Equipment to Inventory</h1>
       <row>
         <form onSubmit={handleSubmit}>
           <div className="form-group" size="lg" controlId="Name">
@@ -61,6 +61,7 @@ function AddEquipment() {
               <input
                 className="input-add"
                 value={description}
+                id="descrip"
                 onChange={(e) => setDescription(e.target.value)}
               ></input>
 
@@ -91,7 +92,7 @@ function AddEquipment() {
                 </div>
               </div>
               <div class="d-grid gap-2 col-1 mx-auto float-right">
-                <button class="btn btn-secondary" type="submit">
+                <button class="colorButton" type="submit" id="addButton">
                   <h3>Add</h3>
                 </button>
               </div>

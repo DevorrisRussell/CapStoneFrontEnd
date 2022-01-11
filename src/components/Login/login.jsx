@@ -35,8 +35,13 @@ function Login(props) {
             >
               <div className="card-body">
                 <form onSubmit={handleSubmit}>
-                  <div className="form-group" size="lg" controlId="email">
-                    <label className="form">Email</label>
+                  <div
+                    className="form-group"
+                    size="lg"
+                    controlId="email"
+                    id="loginField"
+                  >
+                    <label className="form">Email:</label>
                     <input
                       className="input-login"
                       autoFocus
@@ -45,8 +50,13 @@ function Login(props) {
                       onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
-                  <div className="form-group" size="lg" controlId="password">
-                    <label className="form">Password</label>
+                  <div
+                    className="form-group"
+                    size="lg"
+                    controlId="password"
+                    id="passwordField"
+                  >
+                    <label className="form">Password:</label>
                     <input
                       type="password"
                       value={password}
@@ -55,7 +65,7 @@ function Login(props) {
                     />
                   </div>
                   <div class="d-grid gap-2">
-                    <button class="btn btn-secondary" type="submit">
+                    <button class="buttonField" type="submit">
                       <h3>Login</h3>
                     </button>
                   </div>

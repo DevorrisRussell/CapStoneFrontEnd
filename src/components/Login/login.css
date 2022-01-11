@@ -3,7 +3,6 @@
   margin-left: auto;
 
   max-width: 1700px;
-  background-color: #5cdb95;
 
   padding-right: 30px;
 }
@@ -38,4 +37,10 @@
 
 .input-login {
   align-self: auto;
+}
+#loginField input {
+  margin-left: 2.8em;
+}
+#passwordField input {
+  margin-left: 1em;
 }

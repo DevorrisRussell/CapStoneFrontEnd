@@ -44,7 +44,7 @@ function AddEquipment() {
         <form onSubmit={handleSubmit}>
           <div className="form-group" size="lg" controlId="Name">
             <label className="form-label">
-              <h2>Equipment</h2>
+              <h2>Equipment:</h2>
             </label>
             <input
               className="input-add"
@@ -56,7 +56,7 @@ function AddEquipment() {
 
             <div className="form-group" size="lg" controlId="Description">
               <label className="form-label">
-                <h2>Description</h2>
+                <h2>Description:</h2>
               </label>
               <input
                 className="input-add"
@@ -67,7 +67,7 @@ function AddEquipment() {
 
               <div className="form-group" size="lg" controlId="Name">
                 <label className="form-label">
-                  <h2>Color</h2>
+                  <h2>Color:</h2>
                 </label>
                 <input
                   className="input-add"
@@ -79,7 +79,7 @@ function AddEquipment() {
                 />
                 <div className="form-group" size="lg" controlId="Name">
                   <label className="form-label">
-                    <h2>Serial Number</h2>
+                    <h2>Serial Number:</h2>
                   </label>
                   <input
                     className="input-add"
@@ -93,7 +93,7 @@ function AddEquipment() {
               </div>
               <div class="d-grid gap-2 col-1 mx-auto float-right">
                 <button class="colorButton" type="submit" id="addButton">
-                  <h3>Add</h3>
+                  <h3>Add:</h3>
                 </button>
               </div>
 

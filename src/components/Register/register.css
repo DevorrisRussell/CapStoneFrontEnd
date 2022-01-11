@@ -25,29 +25,36 @@ img {
 #formName input {
   margin-left: 4.7em;
   margin-bottom: 0.4em;
+  border-color: #5cdb95;
 }
 
 #formEmail input {
   margin-left: 5em;
   margin-bottom: 0.4em;
+  border-color: #5cdb95;
 }
 #formPassword input {
   margin-left: 3.3em;
   margin-bottom: 0.4em;
+  border-color: #5cdb95;
 }
 #formStreetNumber input {
   margin-left: 0.9em;
   margin-bottom: 0.4em;
+  border-color: #5cdb95;
 }
 #formStreetName input {
   margin-left: 1.9em;
   margin-bottom: 0.4em;
+  border-color: #5cdb95;
 }
 #formCity input {
   margin-left: 5.7em;
+  border-color: #5cdb95;
 }
 #formState input {
   margin-left: 5.1em;
+  border-color: #5cdb95;
 }
 label :first-child {
   margin-right: 0em;

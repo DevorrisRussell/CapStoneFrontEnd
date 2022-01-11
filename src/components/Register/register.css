@@ -5,12 +5,16 @@ img {
   width: 150px;
   object-position: right;
 }
+.registerContainer h2 {
+  margin-bottom: 1em;
+}
 
 .registerContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 1em;
 }
 .registerContainer h3 {
   margin-bottom: 0.5em;
@@ -21,6 +25,7 @@ img {
 
 .buttonField {
   background-color: #5cdb95;
+  margin-top: 0.5em;
 }
 #formName input {
   margin-left: 4.7em;

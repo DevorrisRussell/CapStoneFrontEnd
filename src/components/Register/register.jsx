@@ -108,7 +108,12 @@ function Register() {
                   onChange={(e) => setStreetNumber(e.target.value)}
                 />
               </div>
-              <div className="form-group" size="lg" controlId="Street Name">
+              <div
+                className="form-group"
+                size="lg"
+                controlId="Street Name"
+                id="formStreetName"
+              >
                 <label>Street Name</label>
                 <input
                   autoFocus
@@ -116,7 +121,12 @@ function Register() {
                   value={streetName}
                   onChange={(e) => setStreetName(e.target.value)}
                 />
-                <div className="form-group" size="lg" controlId="City">
+                <div
+                  className="form-group"
+                  size="lg"
+                  controlId="City"
+                  id="formCity"
+                >
                   <label id="cityForm">City</label>
                   <input
                     autoFocus
@@ -125,7 +135,12 @@ function Register() {
                     onChange={(e) => setCity(e.target.value)}
                   />
                 </div>
-                <div className="form-group" size="lg" controlId="State">
+                <div
+                  className="form-group"
+                  size="lg"
+                  controlId="State"
+                  id="formState"
+                >
                   <label>State</label>
                   <input
                     autoFocus

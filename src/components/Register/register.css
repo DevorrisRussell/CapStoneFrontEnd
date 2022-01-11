@@ -39,6 +39,12 @@ img {
   margin-bottom: 0.4em;
 }
 #formStreetName input {
-  margin-left: 0.9em;
+  margin-left: 1.9em;
   margin-bottom: 0.4em;
+}
+#formCity input {
+  margin-left: 5.7em;
+}
+#formState input {
+  margin-left: 5.1em;
 }

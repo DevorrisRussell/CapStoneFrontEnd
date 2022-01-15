@@ -115,7 +115,10 @@ function MyEquipment() {
                   {equipment.rentedAddress ? equipment.rentedAddress : "N/A"}
                 </td>
                 <td>
-                  <button onClick={() => deleteEquipment(equipment._id)}>
+                  <button
+                    id="theButton"
+                    onClick={() => deleteEquipment(equipment._id)}
+                  >
                     Delete
                   </button>
                 </td>
